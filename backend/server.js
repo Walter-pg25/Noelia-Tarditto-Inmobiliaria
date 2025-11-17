@@ -100,9 +100,15 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 3001;
-const server = app.listen(PORT, '0.0.0.0', () => {
+const HOST = process.env.RAILWAY_STATIC_URL ? '0.0.0.0' : '0.0.0.0';
+
+const server = app.listen(PORT, HOST, () => {
   const address = server.address();
   console.log(`✓ Servidor ejecutándose en puerto ${PORT}`);
   console.log(`✓ Escuchando en ${address.address}:${address.port}`);
   console.log(`✓ NODE_ENV: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`✓ HOST: ${HOST}`);
+  
+  // Test inmediato de conectividad
+  console.log(`✓ Servidor listo para recibir conexiones`);
 });
