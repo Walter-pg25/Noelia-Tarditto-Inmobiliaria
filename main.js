@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
 
                 localStorage.setItem('propiedadActual', JSON.stringify(datosPropiedad));
-                window.location.href = `Detalle-Propiedad.html?id=${propiedadId}`;
+                window.location.href = `Detalle-propiedad.html?id=${propiedadId}`;
             });
         });
 
@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* CARGAR DATOS EN PÁGINA DE DETALLE */
-    if (window.location.pathname.includes('Detalle-Propiedad') || window.location.pathname.includes('Detalle-propiedad')) {
+    if (window.location.pathname.includes('Detalle-propiedad')) {
         cargarDetallePropiedad();
     }
 
