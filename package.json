@@ -1,0 +1,11 @@
+{
+  "name": "noelia-tarditto-inmobiliaria",
+  "version": "1.0.0",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "build": "cd backend && npm install",
+    "start": "cd backend && node server.js"
+  }
+}
