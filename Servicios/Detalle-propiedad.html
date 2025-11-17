@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../main.js" type="text/javascript"></script>
+    <title>Detalles de propiedad - NT Inmobiliaria</title>
+    <link rel="icon" type="image/png" href="../img/LOGOS PARA FONDO BLANCO NT PNG FONDO TRANPARENCIA 25 (1).png">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="Logo-group">
+                <a href="../Pagina Principal.html">
+                    <img class="logo" src="../img/LOGOS PARA FONDO BLANCO NT PNG FONDO TRANPARENCIA 25 (1).png" alt="Logo NT">
+                </a>
+            </div>
+            <label class="label_ham" id="boton-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="list_icon" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6l16 0" />
+                    <path d="M4 12l16 0" />
+                    <path d="M4 18l16 0" />
+                </svg>
+            </label>
+            <ul class="ul_links" id="menu-desplegable">
+                <li class="li_links"><a href="../Pagina Principal.html#servicios" class="link">Servicios</a></li>
+                <li class="li_links"><a href="../Pagina Principal.html#contacto" class="link">Contactame</a></li>
+                <li class="li_links"><a href="https://arquiler.com/" class="link" target="_blank">Calculadora Alquileres</a></li>
+                <li class="li_links"><a href="../Preguntas frecuentes/preguntas-frecuentes.html" class="link">Preguntas Frecuentes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-detalle">
+        <!-- Botón volver -->
+        <section class="detalle-navegacion">
+            <button onclick="history.back()" class="btn-volver">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Volver al listado
+            </button>
+        </section>
+
+        <!-- Contenedor principal del detalle -->
+        <section class="detalle-propiedad">
+            <div class="detalle-container">
+                <!-- Galería de imágenes -->
+                <div class="detalle-galeria">
+                    <div class="galeria-principal">
+                        <img id="imagen-principal" src="../img/propiedad_placeholder_1.jpg" alt="Imagen principal">
+                        <span class="detalle-tag" id="estado-tag">EN VENTA</span>
+                    </div>
+                    <div class="galeria-thumbnails">
+                        <img class="thumbnail active" src="../img/propiedad_placeholder_1.jpg" alt="Imagen 1" onclick="cambiarImagenPrincipal(this)">
+                        <img class="thumbnail" src="../img/propiedad_placeholder_1.jpg" alt="Imagen 2" onclick="cambiarImagenPrincipal(this)">
+                        <img class="thumbnail" src="../img/propiedad_placeholder_1.jpg" alt="Imagen 3" onclick="cambiarImagenPrincipal(this)">
+                        <img class="thumbnail" src="../img/propiedad_placeholder_1.jpg" alt="Imagen 4" onclick="cambiarImagenPrincipal(this)">
+                    </div>
+                </div>
+
+                <!-- Información de la propiedad -->
+                <div class="detalle-info">
+                    <h1 class="detalle-titulo" id="titulo-propiedad">Nombre de la Propiedad</h1>
+                    <p class="detalle-ubicacion" id="ubicacion-propiedad">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Rivadavia, Mendoza
+                    </p>
+                    <p class="detalle-precio" id="precio-propiedad">USD $55.000</p>
+
+                    <div class="detalle-caracteristicas-principales">
+                        <div class="caracteristica-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ed3237" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                            <span id="tipo-propiedad">Casa</span>
+                        </div>
+                        <div class="caracteristica-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ed3237" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <span id="habitaciones-propiedad">4 habitaciones</span>
+                        </div>
+                        <div class="caracteristica-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ed3237" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1 0l-1 1a1.5 1.5 0 0 0 0 1L7 9"></path>
+                                <path d="m15 6 2.5-2.5a1.5 1.5 0 0 1 1 0l1 1a1.5 1.5 0 0 1 0 1L17 9"></path>
+                                <path d="M7.5 14A6.5 6.5 0 0 0 14 20.5"></path>
+                                <path d="M9 21a2 2 0 1 1-4 0"></path>
+                            </svg>
+                            <span id="banos-propiedad">2 baños</span>
+                        </div>
+                        <div class="caracteristica-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ed3237" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                            </svg>
+                            <span id="superficie-terreno">250 m²</span>
+                        </div>
+                        <div class="caracteristica-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ed3237" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path>
+                                <path d="M3 11h18"></path>
+                            </svg>
+                            <span id="superficie-cubierta">180 m²</span>
+                        </div>
+                        <div class="caracteristica-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ed3237" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2a2 2 0 0 1 1.82 2.87M17 16h4"></path>
+                                <path d="M11 6h1a2 2 0 0 1 2 2v7"></path>
+                                <circle cx="9" cy="18" r="2"></circle>
+                                <circle cx="17" cy="18" r="2"></circle>
+                            </svg>
+                            <span id="cochera-propiedad">Cochera para 2 autos</span>
+                        </div>
+                    </div>
+
+                    <div class="detalle-descripcion">
+                        <h2>Descripción</h2>
+                        <p id="descripcion-propiedad">
+                            Hermosa propiedad ubicada en una zona tranquila y residencial. La casa cuenta con amplios espacios, excelente iluminación natural y todas las comodidades para una vida confortable. Ideal para familias que buscan un hogar acogedor en una ubicación privilegiada.
+                        </p>
+                    </div>
+
+                    <div class="detalle-caracteristicas-adicionales">
+                        <h2>Características adicionales</h2>
+                        <ul id="caracteristicas-lista">
+                            <li>✓ Cocina equipada</li>
+                            <li>✓ Aire acondicionado</li>
+                            <li>✓ Calefacción</li>
+                            <li>✓ Jardín</li>
+                            <li>✓ Patio</li>
+                            <li>✓ Parrilla</li>
+                        </ul>
+                    </div>
+
+                    <div class="detalle-contacto-formulario">
+                        <h2 class="desa">Consultar por esta propiedad</h2>
+                        
+                        <form class="formulario-detalle" id="formulario-consulta">
+                            <!-- Propiedad seleccionada (readonly) -->
+                            <div class="form-grupo">
+                                <label for="propiedad-consulta">Propiedad de interés</label>
+                                <div>
+                                    <input 
+                                    type="text" 
+                                    id="propiedad-consulta" 
+                                    class="form-input readonly-input"
+                                    readonly
+                                    placeholder="Nombre de la propiedad">
+                                </div>
+                            </div>
+
+                            <!-- Nombre -->
+                            <div class="form-grupo">
+                                <label for="nombre-consulta">Nombre completo *</label>
+                                <div>
+                                    <input 
+                                    type="text" 
+                                    id="nombre-consulta" 
+                                    class="form-input"
+                                    placeholder="Ej: Juan Pérez"
+                                    required
+                                    minlength="3">
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-grupo">
+                                <label for="email-consulta">Email *</label>
+                                <div>
+                                    <input 
+                                    type="email" 
+                                    id="email-consulta" 
+                                    class="form-input"
+                                    placeholder="ejemplo@correo.com"
+                                    required>
+                                </div>
+                            </div>
+
+                            <!-- Teléfono -->
+                            <div class="form-grupo">
+                                <label for="telefono-consulta">Teléfono / WhatsApp *</label>
+                                <div>
+                                    <input 
+                                    type="tel" 
+                                    id="telefono-consulta" 
+                                    class="form-input"
+                                    placeholder="+54 9 263 XXX-XXXX"
+                                    required>
+                                </div>
+                            </div>
+
+                            <!-- Mensaje / Consulta -->
+                            <div class="form-grupo">
+                                <label for="mensaje-consulta">Mensaje / Consultas *</label>
+                                <div>
+                                    <textarea 
+                                    id="mensaje-consulta" 
+                                    class="form-textarea"
+                                    placeholder="Escribe tu consulta aquí. Ejemplo: Me interesa conocer más detalles sobre la propiedad, quisiera coordinar una visita..."
+                                    rows="5"
+                                    required
+                                    minlength="10"></textarea>
+                                <small class="form-hint">Cuéntanos qué necesitas saber o coordinar</small>
+                                </div>
+                                
+                            </div>
+
+                            <!-- Botón de envío -->
+                            <button type="submit" class="btn-enviar-consulta">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                Enviar Consulta
+                            </button>
+                        </form>
+
+                        <!-- Mensaje de éxito (oculto por defecto) -->
+                        <div class="mensaje-exito" id="mensaje-exito" style="display: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <h3>¡Consulta enviada con éxito!</h3>
+                            <p>Nos pondremos en contacto contigo a la brevedad para coordinar la visita y responder tus consultas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+        <div class="footer-columna">
+            <img src="../img/Logo PNG - Gris.png" alt="NT Logo" class="footer-logo">
+            <p class="footer-descripcion">
+                Tu confianza en cada operación. Profesionalismo y dedicación 
+                en el mercado inmobiliario de Mendoza.
+            </p>
+                <div class="footer-redes">
+                    <a href="https://web.facebook.com/people/Noelia-Tarditto/61568046043850/" target="_blank" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/noeliatarditto_inmobiliaria/" target="_blank" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/5492634715111" target="_blank" aria-label="WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-columna">
+                <h4>Enlaces Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="../Pagina Principal.html#servicios">Servicios</a></li>
+                    <li><a href="/Servicios/Alquiler.html">Alquileres</a></li>
+                    <li><a href="/Servicios/Ventas.html">Ventas</a></li>
+                    <li><a href="../Pagina Principal.html#quien-soy">Quién Soy</a></li>
+                    <li><a href="../Pagina Principal.html#contactame">Contactame</a></li>
+                    <li><a href="../Preguntas frecuentes/preguntas-frecuentes.html">Prefuntas frecuentes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h4>Contacto</h4>
+                <ul class="footer-contacto">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>Rivadavia, Mendoza</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span>+54 9 263 471-5111</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>info@noeliainmobiliaria.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h4>Horarios de Atención</h4>
+                <ul class="footer-horarios">
+                    <li>
+                        <strong>Lunes a Viernes</strong>
+                        <span>9:00 - 17:00 hs</span>
+                    </li>
+                    <li>
+                        <strong>Sábados</strong>
+                        <span>cerrado</span>
+                    </li>
+                    <li>
+                        <strong>Domingos</strong>
+                        <span>Cerrado</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-copyright">
+            <p>© 2025 Noelia Tarditto Inmobiliaria. Todos los derechos reservados.</p>
+            <p class="footer-ubicacion">Rivadavia, Mendoza, Argentina</p>
+        </div>
+    </footer>
+</body>
+</html>
