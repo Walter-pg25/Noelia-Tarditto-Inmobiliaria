@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Configuración de API URL según entorno
     const API_URL = window.location.hostname === 'localhost' 
         ? 'http://localhost:3001' 
-        : 'https://hv1v92xv-3001.brs.devtunnels.ms'; // Cambia esto por tu URL de producción (Railway, Render, etc)
+        : 'https://noelia-tarditto-inmobiliaria-production.up.railway.app';
 
     // Menú desplegable
     const botonMenu = document.getElementById('boton-menu');
