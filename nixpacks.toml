@@ -2,10 +2,7 @@
 nixPkgs = ['nodejs_18']
 
 [phases.install]
-cmds = ['cd backend && npm install --production']
-
-[phases.build]
-cmds = ['echo "Build complete"']
+cmds = ['cd backend && npm install']
 
 [start]
-cmd = 'cd backend && PORT=$PORT node server.js'
+cmd = 'npm start'
