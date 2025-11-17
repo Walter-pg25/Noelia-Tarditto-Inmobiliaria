@@ -100,6 +100,9 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Servidor ejecutándose en puerto ${PORT}`);
+const server = app.listen(PORT, '0.0.0.0', () => {
+  const address = server.address();
+  console.log(`✓ Servidor ejecutándose en puerto ${PORT}`);
+  console.log(`✓ Escuchando en ${address.address}:${address.port}`);
+  console.log(`✓ NODE_ENV: ${process.env.NODE_ENV || 'development'}`);
 });
